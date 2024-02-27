@@ -1,0 +1,44 @@
+<app-hnavbar></app-hnavbar>
+
+<div class="main-container">
+  <div class="side-panel">
+    <!-- Add other navigation buttons as needed -->
+    <button (click)="navigate('ehome')">Home</button>
+    <button (click)="navigate('vbpro')">Business Profile</button>
+    <button (click)="navigate('bpro')">Edit Business Profile</button>
+  </div>
+
+  <div class="content-container">
+    <br><br><br><br><br>
+
+    <!-- Form for creating/updating a business profile -->
+    <form>
+      <label for="businessName">Business Name:</label>
+      <input type="text" id="businessName" name="businessName" [(ngModel)]="businessProfile.businessName" required>
+
+      <label for="industry">Industry:</label>
+      <input type="text" id="industry" name="industry" [(ngModel)]="businessProfile.industry" required>
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" [(ngModel)]="businessProfile.location" required>
+
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" [(ngModel)]="businessProfile.description" required>
+
+      <label for="goal">Goal:</label>
+      <input type="text" id="goal" name="goal" [(ngModel)]="businessProfile.goal" required>
+
+      <label for="opportunities">Opportunities:</label>
+      <input type="text" id="opportunities" name="opportunities" [(ngModel)]="businessProfile.opportunities" required>
+
+      <!-- Add profile picture input -->
+      <label for="profilePicture">Profile Picture:</label>
+      <input type="file" id="profilePicture" name="profilePicture" (change)="handleFileInput($event)" accept="image/*">
+
+      <!-- Add other fields as needed -->
+      <div class="update">
+        <button type="button" (click)="saveOrUpdateProfile()">Save/Update Profile</button>
+      </div>
+    </form>
+  </div>
+</div>

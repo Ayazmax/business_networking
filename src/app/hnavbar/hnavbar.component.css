@@ -1,0 +1,47 @@
+.hnavbar {
+  background-color: #3936e9;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left img {
+    width: 40px; /* Set the width as per your preference */
+    height: auto; /* Maintain the aspect ratio */
+  }
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.hnavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3936e9;
+    color: #fff;
+    padding: 10px 20px;
+    z-index: 1000;
+  }
+
+.search-bar {
+  margin-right: 20px;
+}
+
+.search-bar input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  width: 200px; /* Adjust the width as needed */
+}
+
+.notification-icon,
+.three-dots-icon {
+  margin-right: 18px;
+  cursor: pointer;
+  font-size: 20px; /* Adjust the font size as needed */
+}

@@ -1,0 +1,65 @@
+<app-hnavbar></app-hnavbar>
+
+<body>
+  <div class="main-container">
+    <div class="side-panel">
+      <button (click)="navigate('phome')">Home</button>
+      <button (click)="navigate('ae')">Find Enterpreneur</button>
+      <button (click)="navigate('mpostp')">Manage Posts</button>
+      <button (click)="navigate('vupro')">User Profile</button>
+    </div>
+
+    <div class="content-container">
+      <h2>User List</h2>
+
+      <!-- User Table -->
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>Experienced financial advisor with expertise in investments.</td>
+            <td>
+              <button (click)="viewProfile()">View Profile</button>
+              <button (click)="apply()">Apply</button>
+            </td>
+          </tr>
+          <!-- Add more rows dynamically based on your data -->
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>Loan Doe</td>
+            <td>Experienced financial advisor with expertise in investments.</td>
+            <td>
+              <button (click)="viewProfile()">View Profile</button>
+              <button (click)="apply()">Apply</button>
+            </td>
+          </tr>
+          <!-- Add more rows dynamically based on your data -->
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>Mahinda Rajapaksha</td>
+            <td>Experienced financial advisor with expertise in investments.</td>
+            <td>
+              <button (click)="viewProfile()">View Profile</button>
+              <button (click)="apply()">Apply</button>
+            </td>
+          </tr>
+          <!-- Add more rows dynamically based on your data -->
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</body>
+
+

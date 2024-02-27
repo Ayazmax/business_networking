@@ -1,0 +1,35 @@
+<app-hnavbar></app-hnavbar>
+
+<div class="main-container">
+  <div class="side-panel">
+    <!-- Add other navigation buttons as needed -->
+    <button (click)="navigate('phome')">Home</button>
+    <button (click)="navigate('vupro')">User Profile</button>
+    <button (click)="navigate('upro')">Edit User Profile</button>
+  </div>
+
+  <div class="content-container">
+    <h2>User Profile</h2>
+
+    <!-- Profile Details Section -->
+    <div class="profile-details">
+      <!-- Display Profile Picture -->
+      <div class="profile-picture">
+        <img src="{{ userProfile.profilePicture }}" alt="Profile Picture">
+      </div>
+
+      <!-- Other Profile Details -->
+      <p><strong>Full Name:</strong> {{ userProfile.fullname }}</p>
+      <p><strong>User Name:</strong> {{ userProfile.username }}</p>
+      <p><strong>Email:</strong> {{ userProfile.email }}</p>
+      <p><strong>Address:</strong> {{ userProfile.address }}</p>
+      <p><strong>Contact No:</strong> {{ userProfile.contact }}</p>
+      <!-- Add other profile details as needed -->
+    </div>
+
+    <!-- Back Button -->
+    <div class="back">
+      <button type="button" (click)="navigate('ehome')">Back to Home</button>
+    </div>
+  </div>
+</div>

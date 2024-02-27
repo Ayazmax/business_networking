@@ -1,0 +1,31 @@
+<app-lsnavbar></app-lsnavbar>
+
+<body>
+  <div class="login-container">
+    <h2>Login To Your Account</h2>
+
+    <form (submit)="login()">
+
+      <label for="email">Email</label>
+      <!-- Add name attribute -->
+      <input type="text" id="email" name="email" placeholder="Ex. johndoe@example.com" [(ngModel)]="username" />
+
+      <label for="password">Password</label>
+      <!-- Add name attribute -->
+      <input type="password" id="password" name="password" placeholder="*************" [(ngModel)]="password" />
+
+      <!-- Save Password Checkbox -->
+      <div class="save-password-container">
+        <input type="checkbox" id="savePassword" name="savePassword">
+        <label for="savePassword">Save Password</label>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+    <br>
+
+    <p class="forgot-password" (click)="openForgotPasswordDialog()">Forgot Password?</p>
+
+    <p class="create">Don't have an account? <a href="http://localhost:4200/signup">Create one here</a></p>
+  </div>
+</body>

@@ -1,0 +1,42 @@
+<app-hnavbar></app-hnavbar>
+
+<div class="main-container">
+  <div class="side-panel">
+    <!-- Add other navigation buttons as needed -->
+    <button (click)="navigate('phome')">Home</button>
+    <button (click)="navigate('vupro')">User Profile</button>
+    <button (click)="navigate('upro')">Edit User Profile</button>
+    <!-- Add more navigation buttons as needed -->
+  </div>
+
+  <div class="content-container">
+    <h2>Create User Profile</h2>
+    <br><br><br><br>
+    <!-- Form for creating a user profile -->
+    <form>
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" [(ngModel)]="userProfile.fullName" required>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="userProfile.username" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="userProfile.email" required>
+
+      <label for="password">Address:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="userProfile.password" required>
+
+      <label for="password">Contact No:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="userProfile.contact" required>
+
+      <label for="profilePicture">Profile Picture:</label>
+      <input type="file" id="profilePicture" name="profilePicture" (change)="handleFileInput($event)" accept="image/*">
+
+      <!-- Add other fields as needed -->
+    <div class="create">
+      <button type="button" (click)="createUserProfile()">Create/ Edit Profile</button>
+    </div>
+    </form>
+  </div>
+</div>
+

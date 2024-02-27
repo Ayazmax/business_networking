@@ -1,0 +1,106 @@
+<app-hnavbar></app-hnavbar>
+
+<body>
+  <div class="main-container">
+    <div class="side-panel">
+      <button (click)="navigate('ehome')">Home</button>
+      <button (click)="navigate('rinquiry')">Raise Inquiry Tickets</button>
+      <button (click)="navigate('aip')">Apply for Investors & Partners</button>
+      <button (click)="navigate('mpost')">Manage Posts</button>
+      <button (click)="navigate('fadvisor')">Find Advisors</button>
+      <button (click)="navigate('setg')">SetUp Goals and Targets</button>
+      <button (click)="navigate('vbpro')">Business Profile</button>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="content-container">
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <select (change)="filterAdvisors($event)">
+        <option value="all">All Categories</option>
+        <option value="HR">HR</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Finance">Finance</option>
+      </select>
+      <button type="button">Search</button>
+    </div>
+
+    <!-- Advisor Details Box -->
+    <div class="advisor-details-box">
+        <!-- Round Profile Picture -->
+        <div class="profile-picture">
+          <img src="https://img.freepik.com/free-photo/portrait-optimistic-businessman-formalwear_1262-3600.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1701302400&semt=ais" alt="Advisor Profile Picture">
+        </div>
+        <br><br><br>
+    
+        <div class="detail-item">
+          <strong>Advisor ID:</strong> <span>{{ advisor.id }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Advisor Name:</strong> <span>{{ advisor.name }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Advisor Email:</strong> <span>{{ advisor.email }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Contact Info:</strong> <span>{{ advisor.contactInfo }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Qualification:</strong> <span>{{ advisor.qualification }}</span>
+        </div>
+      </div>
+
+      <div class="advisor-details-box">
+        <!-- Round Profile Picture -->
+        <div class="profile-picture">
+          <img src="https://monteluke.com.au/wp-content/gallery/linkedin-profile-pictures/cache/3.JPG-nggid03125-ngg0dyn-591x591-00f0w010c010r110f110r010t010.JPG" alt="Advisor Profile Picture">
+        </div>
+        <br><br><br>
+    
+        <div class="detail-item">
+          <strong>Advisor ID:</strong> <span>{{ advisor.id }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Advisor Name:</strong> <span>{{ advisor.name }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Advisor Email:</strong> <span>{{ advisor.email }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Contact Info:</strong> <span>{{ advisor.contactInfo }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Qualification:</strong> <span>{{ advisor.qualification }}</span>
+        </div>
+      </div>
+
+      <div class="advisor-details-box">
+        <!-- Round Profile Picture -->
+        <div class="profile-picture">
+          <img src="https://i.pinimg.com/236x/da/fd/f2/dafdf25168edcb2f0e1d8702797946cc.jpg" alt="Advisor Profile Picture">
+        </div>
+        <br><br><br>
+    
+        <div class="detail-item">
+          <strong>Advisor ID:</strong> <span>{{ advisor.id }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Advisor Name:</strong> <span>{{ advisor.name }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Advisor Email:</strong> <span>{{ advisor.email }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Contact Info:</strong> <span>{{ advisor.contactInfo }}</span>
+        </div>
+        <div class="detail-item">
+          <strong>Qualification:</strong> <span>{{ advisor.qualification }}</span>
+        </div>
+      </div>
+    <!-- Other content for Advisor Portfolios can be added here -->
+  </div>
+  
+</body>

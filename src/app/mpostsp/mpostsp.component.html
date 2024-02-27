@@ -1,0 +1,126 @@
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <app-hnavbar></app-hnavbar>
+  <body>
+
+    <div class="profile-header">
+        <div class="cover-photo">
+            <img src="https://marketplace.canva.com/EAFcKgZKJoA/1/0/1600w/canva-green-aesthetic-fashion-store-photo-collage-facebook-cover-_yjfS0nJYCI.jpg" alt="Cover Photo">
+        </div>
+        <div class="profile-content">
+            <div class="profile-picture">
+                <img src="https://st4.depositphotos.com/6462898/31429/i/450/depositphotos_314294430-stock-photo-young-asian-fashion-designer-her.jpg" alt="Profile Picture">
+            </div>
+            <div class="profile-name">
+                <h2>Min Yun</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+      <div class="side-panel">
+        <button (click)="navigate('phome')">Home</button>
+        <button (click)="navigate('ae')">Find Enterpreneur</button>
+        <button (click)="navigate('mpostp')">Manage Posts</button>
+        <button (click)="navigate('vupro')">User Profile</button>
+      </div>
+    </div>
+  
+    <div class="content-container">
+        <br><br>
+      <div class="home-container">
+        <div class="add">
+        <button type="add">Add Post</button>
+        </div>
+        <!-- First Post -->
+        <div class="post">
+            <span class="material-icons edit-icon" (click)="editPost(postId)">edit</span>
+          <span class="material-icons delete-icon" (click)="deletePost(postId)">delete</span>
+          <h3><span class="material-icons">person</span> User Name</h3>
+          
+          <!-- Image Section -->
+          <div class="post-image">
+            <img src="https://img.freepik.com/premium-photo/young-girl-standing-store-near-clothes-rack-holding-colorful-shopping-bags-isolated-pink_171337-68248.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1698969600&semt=ais" alt="Image Description">
+          </div>
+          
+          <!-- Post Content -->
+          <p>Post content goes here...</p>
+          
+          <!-- Like Button Section -->
+          <div class="like">
+            <button (click)="toggleLike()" [class.liked]="isLiked">
+              <span class="material-icons">thumb_up</span> Like
+            </button>
+          </div>
+          
+          <!-- Comment Section -->
+          <div class="comments" [class.comments-open]="isCommentsOpen">
+            <h4>Comments:</h4>
+            <ul class="comment-list">
+              <li>User 1: Comment 1</li>
+              <!-- Add more comments dynamically based on your data -->
+            </ul>
+            
+            <!-- See Comments Button -->
+            <div class="see-comments-btn" (click)="toggleComments()">
+              See More Comments
+              <span class="arrow-icon" [innerHTML]="isCommentsOpen ? '&#x2191;' : '&#x2193;'"></span>
+            </div>
+            
+            <!-- Add a form for users to submit new comments -->
+            <form>
+              <label for="comment">Add a Comment:</label>
+              <textarea id="comment" placeholder="Type your comment here..."></textarea>
+              <button type="submit">Submit Comment</button>
+            </form>
+          </div>
+        </div>
+  
+        <!-- Second Post (Duplicated) -->
+        <div class="post">
+            <span class="material-icons edit-icon" (click)="editPost(postId)">edit</span>
+          <span class="material-icons delete-icon" (click)="deletePost(postId)">delete</span>
+          <h3><span class="material-icons">person</span> User Name</h3>
+          
+          <!-- Image Section -->
+          <div class="post-image">
+            <img src="https://img.uswitch.com/n36b8lzdmgnp/6flMYPMjJ0sZzNs16Fsqa/c525a3f838b0e62716631f003390506b/shutterstock_1736005427212121212.jpg?auto=format%2Ccompress&q=35&ixlib=react-9.5.1-beta.1" alt="Image Description">
+          </div>
+          
+          <!-- Post Content -->
+          <p>Post content goes here...</p>
+          
+          <!-- Like Button Section -->
+          <div class="like">
+            <button (click)="toggleLike()" [class.liked]="isLiked">
+              <span class="material-icons">thumb_up</span> Like
+            </button>
+          </div>
+          
+          <!-- Comment Section -->
+          <div class="comments" [class.comments-open]="isCommentsOpen">
+            <h4>Comments:</h4>
+            <ul class="comment-list">
+              <li>User 1: Comment 1</li>
+              <!-- Add more comments dynamically based on your data -->
+            </ul>
+            
+            <!-- See Comments Button -->
+            <div class="see-comments-btn" (click)="toggleComments()">
+              See More Comments
+              <span class="arrow-icon" [innerHTML]="isCommentsOpen ? '&#x2191;' : '&#x2193;'"></span>
+            </div>
+            
+            <!-- Add a form for users to submit new comments -->
+            <form>
+              <label for="comment">Add a Comment:</label>
+              <textarea id="comment" placeholder="Type your comment here..."></textarea>
+              <button type="submit">Submit Comment</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  

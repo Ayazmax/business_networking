@@ -1,0 +1,80 @@
+<app-hnavbar></app-hnavbar>
+
+<body>
+  <div class="main-container">
+    <div class="side-panel">
+      <button (click)="navigate('ehome')">Home</button>
+      <button (click)="navigate('rinquiry')">Raise Inquiry Tickets</button>
+      <button (click)="navigate('aip')">Apply for Investors & Partners</button>
+      <button (click)="navigate('mpost')">Manage Posts</button>
+      <button (click)="navigate('fadvisor')">Find Advisors</button>
+      <button (click)="navigate('setg')">SetUp Goals and Targets</button>
+      <button (click)="navigate('vbpro')">Business Profile</button>
+    </div>
+
+    <div class="content-container">
+      <h2>User List</h2>
+
+      <!-- User Type Filter -->
+      <div class="user-type-filter">
+        <label for="userType">Filter by User Type:</label>
+        <select id="userType" name="userType">
+          <option value="all">All</option>
+          <option value="partner">Partner</option>
+          <option value="investor">Investor</option>
+        </select>
+      </div>
+
+      <!-- User Table -->
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>User Type</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>Partner</td>
+            <td>Experienced financial advisor with expertise in investments.</td>
+            <td>
+              <button (click)="viewProfile()">View Profile</button>
+              <button (click)="apply()">Apply</button>
+            </td>
+          </tr>
+          <!-- Add more rows dynamically based on your data -->
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>Loan Doe</td>
+            <td>Investor</td>
+            <td>Experienced financial advisor with expertise in investments.</td>
+            <td>
+              <button (click)="viewProfile()">View Profile</button>
+              <button (click)="apply()">Apply</button>
+            </td>
+          </tr>
+          <!-- Add more rows dynamically based on your data -->
+        </tbody>
+
+        <tbody>
+          <tr>
+            <td>Mahinda Rajapaksha</td>
+            <td>Partner</td>
+            <td>Experienced financial advisor with expertise in investments.</td>
+            <td>
+              <button (click)="viewProfile()">View Profile</button>
+              <button (click)="apply()">Apply</button>
+            </td>
+          </tr>
+          <!-- Add more rows dynamically based on your data -->
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</body>

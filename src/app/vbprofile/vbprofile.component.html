@@ -1,0 +1,36 @@
+<app-hnavbar></app-hnavbar>
+
+<div class="main-container">
+  <div class="side-panel">
+    <!-- Add other navigation buttons as needed -->
+    <button (click)="navigate('ehome')">Home</button>
+    <button (click)="navigate('vpro')">Business Profile</button>
+    <button (click)="navigate('bpro')">Edit Business Profile</button>
+  </div>
+
+  <div class="content-container">
+    <h2>Business Profile</h2>
+
+    <!-- Profile Details Section -->
+    <div class="profile-details">
+      <!-- Display Profile Picture -->
+      <div class="profile-picture">
+        <img src="{{ businessProfile.profilePicture }}" alt="Profile Picture">
+      </div>
+
+      <!-- Other Profile Details -->
+      <p><strong>Business Name:</strong> {{ businessProfile.businessName }}</p>
+      <p><strong>Industry:</strong> {{ businessProfile.industry }}</p>
+      <p><strong>Location:</strong> {{ businessProfile.location }}</p>
+      <p><strong>Description:</strong> {{ businessProfile.description }}</p>
+      <p><strong>Goal:</strong> {{ businessProfile.goal }}</p>
+      <p><strong>Opportunities:</strong> {{ businessProfile.opportunities }}</p>
+      <!-- Add other profile details as needed -->
+    </div>
+
+    <!-- Back Button -->
+    <div class="back">
+      <button type="button" (click)="navigate('ehome')">Back to Home</button>
+    </div>
+  </div>
+</div>

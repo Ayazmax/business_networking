@@ -1,0 +1,47 @@
+<app-hnavbar></app-hnavbar>
+
+<body>
+  <div class="main-container">
+    <div class="side-panel">
+      <button (click)="navigate('ehome')">Home</button>
+      <button (click)="navigate('rinquiry')">Raise Inquiry Tickets</button>
+      <button (click)="navigate('aip')">Apply for Investors & Partners</button>
+      <button (click)="navigate('mpost')">Manage Posts</button>
+      <button (click)="navigate('fadvisor')">Find Advisors</button>
+      <button (click)="navigate('setg')">SetUp Goals and Targets</button>
+      <button (click)="navigate('vbpro')">Business Profile</button>
+    </div>
+
+    <div class="content-container">
+      <h2>Raise Inquiry Tickets</h2>
+
+      <!-- Inquiry Form -->
+      <form>
+      <div>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div>
+        <label for="subject">Inquiry Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+
+      <div>
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+
+      <div>
+        <button type="submit">Submit Inquiry</button>
+      </div>
+      </form>
+
+    </div>
+  </div>
+</body>
